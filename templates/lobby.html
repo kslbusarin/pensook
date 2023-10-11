@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>สวัสดี {{user}}</h1>
+
+    <form id="stock" action="/save" , method="POST">
+      น้ำเปล่า 10 ขวด : เพิ่มลงในตะกร้า
+      <input type="number" name="water" min="0" max="10" value="0" /><br />
+
+      ข้าวสวย 6 ถุง : เพิ่มลงในตะกร้า
+      <input type="number" name="rice" min="0" max="6" value="0" /><br />
+
+      กล้วย 12 หวี: เพิ่มลงในตะกร้า
+      <input type="number" name="banana" min="0" max="12" value="0" /><br />
+
+      ขนมปัง 5 ก้อน : เพิ่มลงในตะกร้า
+      <input type="number" name="bread" min="0" max="5" value="0" /><br />
+
+      นม 3 ขวด : เพิ่มลงในตะกร้า
+      <input type="number" name="milk" min="0" max="3" value="0" /><br />
+
+      <input type="submit" value="ยืนยันคำสั่งซื้อ" />
+    </form>
+    <br />
+
+    <button
+      onclick="document.location='/logout'"
+      type="button"
+      style="margin-top: 20px"
+    >
+      Logout
+    </button>
+  </body>
+</html>
