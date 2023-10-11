@@ -1,17 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Latest compiled and minified CSS -->
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous"
+  />
+
+  <!-- Optional theme -->
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    crossorigin="anonymous"
+  />
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"
+  ></script>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>login</title>
   </head>
+
   <body>
-    <form action="{{ url_for('loginc') }}" method="post">
-      <h2>My App</h2>
-      <input type="text" placeholder="Username" name="usernametxt" />
-      <input type="password" placeholder="Password" name="passwordtxt" /><br />
-      <button type="submit" class="btn btn-light">Login</button>
-    </form>
+    <br>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6 ">
+          <form action="{{ url_for('loginc') }}" method="post">
+            <div class="panel-group">
+              <div class="panel panel-primary text-center">
+                <div class="panel-heading">ลงชื่อเข้าสู่ระบบ</div>
+                <div class="panel-body">
+                  <div class="input-group">
+                    <span class="input-group-addon alert-info " id="">Username</span>
+                    <input type="text" name="usernametxt" class="form-control " autocomplete="off"
+                      placeholder="" value="">
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon alert-info ">Password</span>
+                    <input type="text" name="passwordtxt" class="form-control " autocomplete="off"
+                      placeholder="" value="">
+                    
+                  </div><br>
+  
+                <br>
+                <input type="submit" name="submit" class="btn btn-success " value="ลงชื่อเข้าใช้">
+                <Input type="reset" value="Reset" class="btn btn-warning" name="data">
+          </form>
+        </div>
+        <div class="col-lg-3"></div>
+      </div>
+    </div>
   </body>
 </html>

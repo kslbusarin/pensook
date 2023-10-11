@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 
 <html lang="en">
+  <!-- Latest compiled and minified CSS -->
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous"
+  />
+
+  <!-- Optional theme -->
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    crossorigin="anonymous"
+  />
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"
+  ></script>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,34 +30,59 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>สวัสดี {{user}}</h1>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+          <h1>สวัสดี {{user}}</h1>
+          <form id="stock" action="/save" , method="POST">
+            น้ำเปล่า 10 ขวด : เพิ่มลงในตะกร้า
+            <input
+              type="number"
+              name="water"
+              min="0"
+              max="10"
+              value="0"
+            /><br />
 
-    <form id="stock" action="/save" , method="POST">
-      น้ำเปล่า 10 ขวด : เพิ่มลงในตะกร้า
-      <input type="number" name="water" min="0" max="10" value="0" /><br />
+            ข้าวสวย 6 ถุง : เพิ่มลงในตะกร้า
+            <input type="number" name="rice" min="0" max="6" value="0" /><br />
 
-      ข้าวสวย 6 ถุง : เพิ่มลงในตะกร้า
-      <input type="number" name="rice" min="0" max="6" value="0" /><br />
+            กล้วย 12 หวี: เพิ่มลงในตะกร้า
+            <input
+              type="number"
+              name="banana"
+              min="0"
+              max="12"
+              value="0"
+            /><br />
 
-      กล้วย 12 หวี: เพิ่มลงในตะกร้า
-      <input type="number" name="banana" min="0" max="12" value="0" /><br />
+            ขนมปัง 5 ก้อน : เพิ่มลงในตะกร้า
+            <input type="number" name="bread" min="0" max="5" value="0" /><br />
 
-      ขนมปัง 5 ก้อน : เพิ่มลงในตะกร้า
-      <input type="number" name="bread" min="0" max="5" value="0" /><br />
+            นม 3 ขวด : เพิ่มลงในตะกร้า
+            <input type="number" name="milk" min="0" max="3" value="0" /><br />
+            <br />
 
-      นม 3 ขวด : เพิ่มลงในตะกร้า
-      <input type="number" name="milk" min="0" max="3" value="0" /><br />
-
-      <input type="submit" value="ยืนยันคำสั่งซื้อ" />
-    </form>
-    <br />
-
-    <button
-      onclick="document.location='/logout'"
-      type="button"
-      style="margin-top: 20px"
-    >
-      Logout
-    </button>
+            <input
+              type="submit"
+              name="submit"
+              class="btn btn-success"
+              value="ยืนยันคำสั่งซื้อ"
+            />
+            <br />
+            <button
+              onclick="document.location='/logout'"
+              type="button"
+              style="margin-top: 20px"
+              class="btn btn-danger"
+            >
+              Logout
+            </button>
+          </form>
+        </div>
+        <div class="col-lg-3"></div>
+      </div>
+    </div>
   </body>
 </html>
